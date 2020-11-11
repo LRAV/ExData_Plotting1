@@ -5,7 +5,7 @@ data$Time <- hms(data$Time)
 data <- data %>% filter(Date == "2007-02-01" | Date == "2007-02-02")
 data["tmp"] <- data$Date + data$Time
 
-#plot data
+#plot data (png default is 480x480)
 png(file = "plot3.png")
 with(data, plot(tmp, Sub_metering_1, 
                 ylab = "Energy sub metering", 
